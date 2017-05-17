@@ -58,3 +58,12 @@ To initialize the application it is necessary to initialize mongodb and pm2, to 
 	- react-dom @ 15.4.2
 	- react-router @ 3.0.2
 	- axios @ 0.15.3 - Responsible for making the http link with backend services
+
+ - Folders:
+	-package.json
+	-webpack.config.js
+	- public
+		- index.html
+	- src
+		- main
+			- app.jsx - 
