@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const ExtractTextPplugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     entry: './src/index.jsx',
@@ -7,7 +7,7 @@ module.exports = {
         path: __dirname + '/public',
         filename: './app.js'
     },
-    devserver: {
+    devServer: {
         port: 8080,
         contentBase: './public',
     },
@@ -18,21 +18,21 @@ module.exports = {
         }
     },
     plugins: [
-        new: ExtractTextPplugin('app.css')
-    ], 
+        new ExtractTextPlugin('app.css')
+    ],
     module: {
-        leoaders: [{
+        loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
-            exclude: /node_modules/,
+            exlude: /node-modules/,
             query: {
                 presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
             }
         }, {
             test: /\.css$/,
-            loader: ExtractTextPplugin.extract('style-loader', 'css-loader')
-        },{
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        }, {
             test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
             loader: 'file'
         }]

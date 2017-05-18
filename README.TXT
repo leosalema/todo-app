@@ -59,11 +59,5 @@ To initialize the application it is necessary to initialize mongodb and pm2, to 
 	- react-router @ 3.0.2
 	- axios @ 0.15.3 - Responsible for making the http link with backend services
 
- - Folders:
-	-package.json
-	-webpack.config.js
-	- public
-		- index.html
-	- src
-		- main
-			- app.jsx - 
+
+To start the application in developer mode type in the terminal (npm run dev) if you want to generate the final version type (npm run production)
